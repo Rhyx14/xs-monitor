@@ -23,7 +23,7 @@ class CUDA_device():
     
     @property
     def power(self)->str:
-        return nvmlDeviceGetPowerState(self.handle)
+        return nvmlDeviceGetPowerUsage(self.handle)/1000
         
     @property
     def fan_speed(self)->str:
